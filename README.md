@@ -68,7 +68,7 @@ class ExampleActivity : AppCompatActivity() {
   ...
 }
 </pre>
-
+No viewmodel usamo @HiltViewModel. No construtor usamos @Inject. <br>
 
 
 
