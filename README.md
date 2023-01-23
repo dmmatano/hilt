@@ -69,6 +69,14 @@ class ExampleActivity : AppCompatActivity() {
 }
 </pre>
 No viewmodel usamo @HiltViewModel. No construtor usamos @Inject. <br>
-
-
+<br>
+<pre>
+@Module
+@InstallIn(ViewModelComponent::class)
+interface DomainBlabla{
+   @Binds
+   fun bindCreateProd(useCase: CreateProdImpl): CreateProd
+   ...
+}  
+</pre>
 
