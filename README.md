@@ -47,6 +47,8 @@ class ExampleApplication : Application() { ... }
 Onde for usar dependencia:<br>
 @AndroidEntryPoint
 class ExampleActivity : AppCompatActivity() { ... }<br><br>
+No manifest, a tag application recebe o atributo:<br>
+android.name=".YourClassApplication"<br><br>
 Atualmente, o Hilt é compatível com as seguintes classes do Android:
 <br>
 - Application (ao usar @HiltAndroidApp)
