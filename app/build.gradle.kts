@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("com.google.devtools.ksp")
+    id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 }
 
@@ -37,6 +37,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -49,7 +53,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Dagger-Hilt DI
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation("com.google.dagger:hilt-android:2.51.1")
     //annotationProcessor("com.google.dagger:hilt-compiler:2.51.1")
 }
